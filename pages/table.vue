@@ -49,15 +49,19 @@
   onBeforeMount(async () => {
 
   let s=   await useFetch('/api/prisma/get-all-stagiaire')
-     data.value .push(s)
-     console.log(s)
-    setTimeout(() => userStore.isLoading = false, 1000)
+    
+   
+    setTimeout(() =>{
+      data.value =(s.data.value)
+      console.log(s.data.value)
+      userStore.isLoading = false
+    } , 1000)
 })
   const columns = [
     {
       name: 'nom',
       dataIndex: 'nom',
-      key: 'name',
+      key: 'nom',
     },
     {
       title: 'prenom',
