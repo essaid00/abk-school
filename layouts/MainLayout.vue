@@ -19,12 +19,31 @@
                 "
             >
                 <li class="border-r border-r-gray-400 px-3 hover:text-[#FF4646] cursor-pointer">
-                    Sell on AliExpress
+                 
+                    <NuxtLink 
+                                    to="/stagaire"
+                                    class="bg-[#FF4646] text-center w-full text-[16px] rounded-sm text-white font-semibold p-2"
+                                >
+                                    stagaire
+                                </NuxtLink>
                 </li>
                 <li class="border-r border-r-gray-400 px-3 hover:text-[#FF4646] cursor-pointer">
-                    Cookie Preferences
-                </li>
-                <li class="border-r border-r-gray-400 px-3 hover:text-[#FF4646] cursor-pointer">
+                 
+                 <NuxtLink 
+                                 to="/admin"
+                                 class="bg-[#FF4646] text-center w-full text-[16px] rounded-sm text-white font-semibold p-2"
+                             >
+                             admin
+                             </NuxtLink>
+             </li>
+             <li class="border-r border-r-gray-400 px-3 hover:text-[#FF4646] cursor-pointer">
+             <NuxtLink 
+                                 to="/table"
+                                 class="bg-[#FF4646] text-center w-full text-[16px] rounded-sm text-white font-semibold p-2"
+                             >
+                             table
+                             </NuxtLink>
+             
                     Help
                 </li>
                 <li class="border-r border-r-gray-400 px-3 hover:text-[#FF4646] cursor-pointer">
