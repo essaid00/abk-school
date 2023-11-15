@@ -39,7 +39,7 @@
              <li class="border-r border-r-gray-400 px-3 hover:text-[#FF4646] cursor-pointer">
              <NuxtLink 
                                  to="/table"
-                                 class="bg-[#FF4646] text-center w-full text-[16px] rounded-sm text-white font-semibold p-2"
+                                 class=" text-center w-full text-[16px] rounded-sm text-white font-semibold p-2"
                              >
                              table
                              </NuxtLink>

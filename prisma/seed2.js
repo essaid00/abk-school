@@ -3,8 +3,21 @@ const prisma = new PrismaClient();
 
 async function seedStagiaires() {
   try {
+    await prisma.niveaus.createMany({
+      data:     [
+        {
+          "numero": 1,
+          "niveau": "DD",},
+          {
+            "numero": 2,
+            "niveau": "GG",},
+            {
+              "numero": 3,
+              "niveau": "JJ",}, {
+                "numero": 4,
+                "niveau": "KK",}]});
 
-    await prisma.products.createMany({
+    await prisma.stagiaires.createMany({
         data:     [
     {
       "numero": 1489,

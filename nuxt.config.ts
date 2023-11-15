@@ -5,6 +5,11 @@ import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers';
 
 export default defineNuxtConfig({
   vite: {
+    server: {
+      fs: {
+          allow: ["/home/user/Monorepo"]
+      }
+  },
     plugins: [
       Components({
         resolvers: [AntDesignVueResolver()],
