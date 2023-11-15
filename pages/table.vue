@@ -1,4 +1,6 @@
 <template>
+        <MainLayout>
+        <div id="ShoppingCartPage" class="mt-4 max-w-[1200px] mx-auto px-2">
     <a-table :columns="columns" :data-source="data">
       <template #headerCell="{ column }">
         <template v-if="column.key === 'name'">
@@ -40,10 +42,12 @@
         </template>
       </template>
     </a-table>
+        </div></MainLayout>
   </template>
   <script lang="ts" setup>
   import { SmileOutlined, DownOutlined } from '@ant-design/icons-vue';
   import { useUserStore } from '~/stores/user';
+  import MainLayout from '~/layouts/MainLayout.vue';
   const userStore = useUserStore()
   const data = ref([])
   onBeforeMount(async () => {
