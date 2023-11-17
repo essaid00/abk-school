@@ -22,7 +22,7 @@
                         <li class="border-r border-r-gray-400 px-3 hover:text-[#FF4646] cursor-pointer">
                         
                             <NuxtLink 
-                                            to="/stagaire"
+                                            to="/stagiaire/add"
                                         >
                                             stagaire
                                         </NuxtLink>
@@ -103,7 +103,7 @@
         <!--/Header-->
       <div class="flex flex-1">
             <!--Sidebar-->
-            <aside id="sidebar" class="bg-side-nav w-1/2 md:w-1/6 lg:w-1/6 border-r border-side-nav hidden md:block lg:block">
+            <aside id="sidebar" p-3 class="bg-side-nav w-1/2 md:w-1/6 lg:w-1/6 border-r border-side-nav hidden md:block lg:block">
                 <div class="flex">
 
                 </div>

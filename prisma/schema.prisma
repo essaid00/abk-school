@@ -65,7 +65,7 @@ model  stagiaires {
   photoPath             String?
   codeNiveau                 Int?
   codeClasse                 Int?
-  Codefiliere         Int?
+  CodeFiliere         Int?
   mnt_initial_scolarite   Int?
   codeVille             String?
   codeQuartie            String?
@@ -77,10 +77,22 @@ model  stagiaires {
   motifSuspension        String?
   dateSuspension           DateTime?   @db.Timestamptz(6)  
   niveau    niveaus?  @relation(fields: [codeNiveau], references: [numero])
+  classe    classes?  @relation(fields: [codeClasse], references: [numero])
+  filiere    filieres?  @relation(fields: [CodeFiliere], references: [numero])
   }
 
 model niveaus {
   numero Int       @id @default(autoincrement())
   niveau String?
+  stagiaires   stagiaires[]
+}
+model classes {
+  numero Int       @id @default(autoincrement())
+  classe String?
+  stagiaires   stagiaires[]
+}
+model filieres {
+  numero Int       @id @default(autoincrement())
+  filiere String?
   stagiaires   stagiaires[]
 }
