@@ -65,7 +65,7 @@ model  stagiaires {
   photoPath             String?
   codeNiveau                 Int?
   codeClasse                 Int?
-  CodeFiliere         Int?
+  codeFiliere         Int?
   mnt_initial_scolarite   Int?
   codeVille             String?
   codeQuartie            String?
@@ -78,7 +78,7 @@ model  stagiaires {
   dateSuspension           DateTime?   @db.Timestamptz(6)  
   niveau    niveaus?  @relation(fields: [codeNiveau], references: [numero])
   classe    classes?  @relation(fields: [codeClasse], references: [numero])
-  filiere    filieres?  @relation(fields: [CodeFiliere], references: [numero])
+  filiere    filieres?  @relation(fields: [codeFiliere], references: [numero])
   }
 
 model niveaus {

@@ -116,7 +116,7 @@
                                     <div class="relative">
 
                                     
-                                        <a-select size="large" v-model:value="form.CodeFiliere"
+                                        <a-select size="large" v-model:value="form.codeFiliere"
                                             placeholder="Active OU en Retraite" style="width: 100%">
                                             <a-select-option v-for="item in filieres.data" :key="item.numero">{{
                                                 item.filiere }}
@@ -143,8 +143,16 @@
                             </div>
                         </form>
                     </div>
+                   
                 </div>
+               
+               
             </div>
+            <div class="flex flex-1  flex-col md:flex-row lg:flex-row mx-2">
+                <div class="mb-2 border-solid border-gray-300 rounded border shadow-sm w-full">
+                    
+                    <tableStagire></tableStagire>
+                </div></div>
             </Spin>
             <!--/Grid Form-->
     </MainLayout>
@@ -153,6 +161,7 @@
 <script setup lang="ts" >
 import { useUserStore } from '~/stores/user';
 import MainLayout from '~/layouts/MainLayout.vue';
+import tableStagire from './table.vue'
 import { ref, reactive } from 'vue';
 import { Spin } from 'ant-design-vue';
 import moment from 'moment'; 
@@ -206,7 +215,6 @@ async function save() {
     await useFetch('/api/prisma/create-stagiaire', {
         method: "POST",
         body: {
-            numero: 1,
             nom: form.nom,
             prenom: form.prenom,
             dateNaissance: moment(form.dateNaissance, "DD/MM/YYYY"),
@@ -220,7 +228,7 @@ async function save() {
             dernierEtablissement: form.dernierEtablissement,
             photoPath: form.photoPath,
             codeClasse: form.codeClasse,
-            codeFiliere: form.CodeFiliere,
+            codeFiliere: form.codeFiliere,
             codeNiveau: form.codeNiveau,
             mnt_initial_scolarite: form.mnt_initial_scolarite,
             codeVille: form.codeVille,
