@@ -9,7 +9,7 @@
                     <div class="p-3">
                         <form class="w-full">
                             <div class="flex flex-wrap -mx-3 mb-2">
-                                <div class="w-full md:w-1/3 px-3 mb-2 md:mb-0">
+                                <div class="w-full md:w-1/4 px-3 mb-2 md:mb-0">
                                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-light mb-1"
                                         for="grid-first-name">
                                         Nom
@@ -19,7 +19,7 @@
                                     <a-input v-model:value="form.nom" size="large" autocomplete="off" placeholder="nom" />
 
                                 </div>
-                                <div class="w-full md:w-1/3 px-3">
+                                <div class="w-full md:w-1/4 px-3">
                                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-light mb-1"
                                         for="grid-last-name">
                                         Prénom
@@ -29,7 +29,7 @@
 
 
                                 </div>
-                                <div class="w-full md:w-1/3 px-3">
+                                <div class="w-full md:w-1/4 px-3">
                                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-light mb-1"
                                         for="grid-last-name">
                                         cin
@@ -40,7 +40,7 @@
                                 </div>
                             </div>
                             <div class="flex flex-wrap -mx-3 mb-6">
-                                <div class="w-full md:w-1/3 px-3 mb-2 md:mb-0">
+                                <div class="w-full md:w-1/4 px-3 mb-2 md:mb-0">
                                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-light mb-1"
                                         for="grid-first-name">
                                         Nomssssssss
@@ -57,33 +57,37 @@
                   />
 
                                 </div>
-                                <div class="w-full md:w-1/3 px-3 mb-2 md:mb-0">
+                                <div class="w-full md:w-1/4 px-3 mb-2 md:mb-0">
                                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-light mb-1"
                                         for="grid-first-name">
-                                        Nom
+                                        lieuNaissance
                                     </label>
+                                    <a-input v-model:value="form.lieuNaissance" size="large"
+                                     autocomplete="off" placeholder="lieuNaissance" />
 
 
                                 </div>
-                                <div class="w-full md:w-1/3 px-3">
+                                <div class="w-full md:w-1/4 px-3">
                                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-light mb-1"
                                         for="grid-last-name">
 
-                                        Prénom
+                                        Adresse
                                     </label>
+                                    <a-input v-model:value="form.adresse" size="large"
+                                     autocomplete="off" placeholder="adresse" />
 
                                 </div>
                             </div>
 
                             <div class="flex flex-wrap -mx-3 mb-2">
-                                <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                                <div class="w-full md:w-1/4 px-3 mb-6 md:mb-0">
                                     <label class="block uppercase tracking-wide text-grey-darker text-xs font-light mb-1"
                                         for="grid-city">
                                         niveau
                                     </label>
                                     <div class="relative">
                                         <a-select size="large" v-model:value="form.codeNiveau"
-                                            placeholder="Active OU en Retraite" style="width: 100%">
+                                            placeholder="niveau" style="width: 100%">
                                             <a-select-option v-for="item in niveaus.data" :key="item.numero">{{
                                                 item.niveau }}
                                             </a-select-option>
@@ -92,7 +96,7 @@
                                     
                                     </div>
                                 </div>
-                                <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                                <div class="w-full md:w-1/4 px-3 mb-6 md:mb-0">
                                     <label class="block uppercase tracking-wide text-grey-darker text-xs font-light mb-1"
                                         for="grid-state">
                                         classe
@@ -101,14 +105,14 @@
 
                   
                                         <a-select size="large" v-model:value="form.codeClasse"
-                                            placeholder="Active OU en Retraite" style="width: 100%">
+                                            placeholder="classe" style="width: 100%">
                                             <a-select-option v-for="item in classes.data" :key="item.numero">{{
                                                 item.classe }}
                                             </a-select-option>
                                         </a-select>
                                     </div>
                                 </div>
-                                <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                                <div class="w-full md:w-1/4 px-3 mb-6 md:mb-0">
                                     <label class="block uppercase tracking-wide text-grey-darker text-xs font-light mb-1"
                                         for="grid-zip">
                                         filiere
@@ -117,7 +121,7 @@
 
                                     
                                         <a-select size="large" v-model:value="form.codeFiliere"
-                                            placeholder="Active OU en Retraite" style="width: 100%">
+                                            placeholder="filiere" style="width: 100%">
                                             <a-select-option v-for="item in filieres.data" :key="item.numero">{{
                                                 item.filiere }}
                                             </a-select-option>
@@ -127,14 +131,15 @@
                                 </div>
                             </div>
                             <div class="flex flex-wrap -mx-3 mb-2">
-                                <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                                <div class="w-full md:w-1/4 px-3 mb-6 md:mb-0">
                                     <a-button size="large" htmlType="submit"
-                                        class="hover:shadow-form w-full rounded-md bg-grey-800 py-3 px-8 text-center text-base font-semibold text-white outline-none"
+                                        class=" w-full 
+                                        bg-[#6A64F1] "
                                         @click.stop.prevent="save">
-                                        save
+                                        Enregistre
                                     </a-button>
                                 </div>
-                                <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                                <div class="w-full md:w-1/4 px-3 mb-6 md:mb-0">
                                     <button
                                         class="hover:shadow-form w-full rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none">
                                         Annuler
@@ -151,7 +156,10 @@
             <div class="flex flex-1  flex-col md:flex-row lg:flex-row mx-2">
                 <div class="mb-2 border-solid border-gray-300 rounded border shadow-sm w-full">
                     
-                    <tableStagire></tableStagire>
+                    <tableStagire
+                     @modifier-stagiaire="modifierStagiareFunc"
+                     @delete-stagiaire="deleteStagiareFunc"
+                    ></tableStagire>
                 </div></div>
             </Spin>
             <!--/Grid Form-->
@@ -162,13 +170,14 @@
 import { useUserStore } from '~/stores/user';
 import MainLayout from '~/layouts/MainLayout.vue';
 import tableStagire from './table.vue'
-import { ref, reactive } from 'vue';
+import { ref, reactive,toRaw } from 'vue';
 import { Spin } from 'ant-design-vue';
 import moment from 'moment'; 
 const userStore = useUserStore()
 const niveaus: any = ref([])
 const filieres: any = ref([])
 const classes: any = ref([])
+const dataTransferRef = reactive<any>({});
 const form: any = reactive({
     nom: undefined,
     prenom: undefined,
@@ -205,10 +214,23 @@ let loading = ref(false);
 onMounted(() => {
     setTimeout(() => userStore.isLoading = false, 200)
 })
+const modifierStagiareFunc = async(data: any) => {
+   // Object.assign(toRaw(data), unref(form));
 
+ 
+   Object.assign(form, data);
+   //form.dateNaissance=  "30/11/2023"
+   form.dateNaissance= moment(data.dateNaissance, "YYYY-MM-DD")
+
+}
+const deleteStagiareFunc = async(numero: Number) => {
+  
+
+}
 async function save() {
     loading.value = (true);
     setTimeout(() =>  loading.value = false, 800)
+    console.log(form.dateNaissance);
     console.log(moment(form.dateNaissance, "DD/MM/YYYY"));
     console.log('eeeeeeeeeeeeee')
     console.log(form)

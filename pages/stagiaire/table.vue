@@ -45,16 +45,11 @@
         <template v-else-if="column.key === 'action'">
           <span>
            
-            <a-button class=""    >
-                                        save
-                                    </a-button>
+           
+                                    <a  @click="handleModifierStagiaretClick(record)">Modifier</a>
             <a-divider type="vertical" />
-            <a>Delete</a>
-            <a-divider type="vertical" />
-            <a class="ant-dropdown-link">
-              More actions
-              <down-outlined />
-            </a>
+            <a @click="handleDeleteStagiairetClick(record)" >Delete</a>
+        
           </span>
         </template>
       </template>
@@ -77,6 +72,15 @@ onBeforeMount(async () => {
     userStore.isLoading = false
   }, 1000)
 })
+const emit = defineEmits(['modifierStagiaire','deleteStagiaire'])
+const handleModifierStagiaretClick =( stagiaire : any)=>{
+
+  emit('modifierStagiaire',  stagiaire )
+}
+const handleDeleteStagiairetClick =( idstagiaire : any)=>{
+
+emit('modifierStagiaire',  idstagiaire )
+}
 const columns = [
   {
     name: 'nom',
